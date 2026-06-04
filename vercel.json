@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "avte-committee-tracker",
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "committees.json", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/committees.json", "dest": "/committees.json", "headers": { "Cache-Control": "no-cache, no-store, must-revalidate" } },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

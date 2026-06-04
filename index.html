@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVTE Committee & Project Tracker</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --border: #e2e5ea;
+    --text: #1a1d23;
+    --text-muted: #6b7280;
+    --text-light: #9ca3af;
+    --active-badge: #10b981;
+    --forming-badge: #f59e0b;
+    --project-badge: #3b82f6;
+    --gap-badge: #f43f5e;
+    --header-bg: #1e2a3a;
+    --avte-teal: #0d9488;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
+  header { background: var(--header-bg); color: #fff; padding: 20px 28px 18px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .header-left h1 { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+  .header-left p { font-size: 12px; opacity: 0.65; margin-top: 2px; }
+  .header-meta { font-size: 11px; opacity: 0.6; text-align: right; }
+  .controls { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 28px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .filter-label { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-right: 4px; }
+  .filter-btn { border: 1px solid var(--border); background: var(--surface); border-radius: 20px; padding: 4px 14px; font-size: 12px; font-weight: 500; cursor: pointer; color: var(--text-muted); transition: all 0.15s; }
+  .filter-btn:hover { background: var(--bg); }
+  .filter-btn.active-filter { background: var(--header-bg); color: #fff; border-color: var(--header-bg); }
+  .filter-btn[data-filter="active"].active-filter { background: var(--active-badge); border-color: var(--active-badge); }
+  .filter-btn[data-filter="forming"].active-filter { background: var(--forming-badge); border-color: var(--forming-badge); }
+  .filter-btn[data-filter="project"].active-filter { background: var(--project-badge); border-color: var(--project-badge); }
+  .search-box { margin-left: auto; border: 1px solid var(--border); border-radius: 6px; padding: 5px 12px; font-size: 12px; width: 180px; outline: none; }
+  .search-box:focus { border-color: var(--avte-teal); }
+  .stats-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 8px 28px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .stat { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); }
+  .stat-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .stat-count { font-weight: 700; color: var(--text); }
+  main { padding: 24px 28px; max-width: 1400px; }
+  .section-heading { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; margin-bottom: 32px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; border-left: 4px solid var(--border); transition: box-shadow 0.15s; }
+  .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .card.status-active { border-left-color: var(--active-badge); }
+  .card.status-forming { border-left-color: var(--forming-badge); }
+  .card.status-project { border-left-color: var(--project-badge); }
+  .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+  .card-title { font-size: 14px; font-weight: 700; line-height: 1.3; }
+  .badge { display: inline-flex; align-items: center; border-radius: 12px; padding: 2px 9px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; flex-shrink: 0; color: #fff; }
+  .badge-active { background: var(--active-badge); }
+  .badge-forming { background: var(--forming-badge); }
+  .badge-project { background: var(--project-badge); }
+  .card-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 10px; }
+  .meta-item { font-size: 11px; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+  .meta-item strong { color: var(--text); font-weight: 600; }
+  .meetings-row { display: flex; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
+  .meeting-item { font-size: 11px; color: var(--text-muted); }
+  .meeting-item strong { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-light); margin-bottom: 1px; }
+  .card-focus { font-size: 12px; font-weight: 600; color: var(--avte-teal); margin-bottom: 6px; }
+  .card-notes { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; line-height: 1.5; }
+  .card-next { background: var(--bg); border-radius: 6px; padding: 8px 10px; font-size: 11px; }
+  .card-next-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 3px; }
+  .board-action-flag { display: inline-flex; align-items: center; gap: 4px; background: #fef2f2; color: #b91c1c; border: 1px solid #fca5a5; border-radius: 4px; padding: 2px 8px; font-size: 10px; font-weight: 600; margin-top: 8px; }
+  .loading { text-align: center; padding: 80px 20px; color: var(--text-muted); }
+  .no-results { text-align: center; padding: 60px 20px; color: var(--text-muted); grid-column: 1/-1; }
+  footer { padding: 16px 28px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-light); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .update-hint { background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 6px 12px; font-size: 11px; color: #92400e; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <h1>AVTE Committee &amp; Project Tracker</h1>
+    <p>Association of Veterinary Technician Educators · Managed by TVD Associates</p>
+  </div>
+  <div class="header-meta" id="headerMeta">Loading…</div>
+</header>
+
+<div class="controls">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active-filter" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="active">Active</button>
+  <button class="filter-btn" data-filter="forming">Forming</button>
+  <button class="filter-btn" data-filter="project">Projects</button>
+  <input class="search-box" type="text" id="searchBox" placeholder="Search committees…">
+</div>
+
+<div class="stats-bar" id="statsBar"><div class="stat">Loading data…</div></div>
+
+<main id="main"><div class="loading">Loading committee data…</div></main>
+
+<footer>
+  <div class="update-hint">Updates managed by Avery (TVD Associates) · Tell Avery: "update [committee] — [change]"</div>
+  <div id="footerSource">avte-committee-tracker · TVD Associates</div>
+</footer>
+
+<script>
+function fmtDate(d) {
+  if (!d) return '—';
+  const [y,m,day] = d.split('-');
+  return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m-1]+' '+parseInt(day)+', '+y;
+}
+function badgeClass(s) { return {active:'badge-active',forming:'badge-forming',project:'badge-project'}[s]||'badge-active'; }
+function badgeLabel(s) { return {active:'Active',forming:'Forming',project:'Project',gap:'Gap'}[s]||s; }
+
+function renderStats(items) {
+  const c={active:0,forming:0,project:0};
+  items.forEach(i=>{if(c[i.status]!==undefined)c[i.status]++;});
+  const colors={active:'#10b981',forming:'#f59e0b',project:'#3b82f6'};
+  const labels={active:'Active',forming:'Forming',project:'Projects'};
+  document.getElementById('statsBar').innerHTML =
+    Object.entries(c).filter(([,v])=>v>0)
+      .map(([k,v])=>`<div class="stat"><div class="stat-dot" style="background:${colors[k]}"></div><span class="stat-count">${v}</span> ${labels[k]}</div>`)
+      .join('')+`<div class="stat" style="margin-left:auto"><span class="stat-count">${items.length}</span> total</div>`;
+}
+
+function renderCard(c) {
+  const meetings = (c.lastMeeting||c.nextMeeting)?`
+    <div class="meetings-row">
+      ${c.lastMeeting?`<div class="meeting-item"><strong>Last meeting</strong>${fmtDate(c.lastMeeting)}</div>`:''}
+      ${c.nextMeeting?`<div class="meeting-item"><strong>Next meeting</strong>${fmtDate(c.nextMeeting)}</div>`:''}
+    </div>`:'';
+  return `<div class="card status-${c.status}">
+    <div class="card-header">
+      <div class="card-title">${c.name}</div>
+      <span class="badge ${badgeClass(c.status)}">${badgeLabel(c.status)}</span>
+    </div>
+    <div class="card-meta">
+      ${c.chair?`<div class="meta-item">👤 <strong>${c.chair}</strong></div>`:''}
+      ${c.tvdLead&&c.tvdLead!=='TBD'?`<div class="meta-item">🏢 TVD: <strong>${c.tvdLead}</strong></div>`:''}
+    </div>
+    ${meetings}
+    <div class="card-focus">${c.currentFocus}</div>
+    <div class="card-notes">${c.notes}</div>
+    <div class="card-next"><div class="card-next-label">Up next</div>${c.nextSteps}</div>
+    ${c.boardActionRequired?'<div class="board-action-flag">⚑ Board Action Required</div>':''}
+  </div>`;
+}
+
+let ALL_DATA = [];
+let activeFilter = 'all';
+
+function renderAll() {
+  const search = document.getElementById('searchBox').value.toLowerCase();
+  const items = ALL_DATA.filter(c => {
+    const matchFilter = activeFilter==='all'||c.status===activeFilter;
+    const matchSearch = !search||[c.name,c.chair||'',c.tvdLead||'',c.notes||'',...(c.tags||[])].join(' ').toLowerCase().includes(search);
+    return matchFilter && matchSearch;
+  });
+  renderStats(items);
+  const sections=[{key:'active',label:'Active Committees'},{key:'forming',label:'Forming / In Development'},{key:'project',label:'Active Projects'}];
+  let html='';
+  sections.forEach(s=>{
+    const group=items.filter(c=>c.status===s.key);
+    if(!group.length) return;
+    html+=`<div class="section-heading">${s.label} (${group.length})</div><div class="grid">${group.map(renderCard).join('')}</div>`;
+  });
+  if(!html) html=`<div class="grid"><div class="no-results">No results found.</div></div>`;
+  document.getElementById('main').innerHTML=html;
+}
+
+// Wire up filters and search
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active-filter'));
+    btn.classList.add('active-filter');
+    activeFilter=btn.dataset.filter;
+    renderAll();
+  });
+});
+document.getElementById('searchBox').addEventListener('input', renderAll);
+
+// Fetch data
+fetch('/committees.json?v='+Date.now())
+  .then(r=>r.json())
+  .then(data=>{
+    ALL_DATA = data.committees;
+    document.getElementById('headerMeta').innerHTML = `Updated ${fmtDate(data.meta.lastUpdated)}<br>TVD Associates`;
+    document.getElementById('footerSource').textContent = `committees.json v${data.meta.version} · ${data.meta.managedBy}`;
+    renderAll();
+  })
+  .catch(()=>{
+    document.getElementById('main').innerHTML='<div class="loading">Could not load committee data. Please refresh.</div>';
+  });
+</script>
+</body>
+</html>
