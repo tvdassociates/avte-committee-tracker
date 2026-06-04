@@ -4,24 +4,300 @@
     "managedBy": "TVD Associates",
     "lastUpdated": "2026-06-04",
     "version": "1.0",
-    "note": "Source of truth for the AVTE Committee & Project Tracker. Update via Avery."
+    "note": "Live — auto-deployed via GitHub. Update via Avery."
   },
   "committees": [
-    {"id":"conference","name":"Conference Committee","type":"committee","status":"active","chair":"Amy Johnson & Amanda Hackerott","tvdLead":"Michele","lastMeeting":"2026-05-18","nextMeeting":"2026-06-22","currentFocus":"Portland and Denver conferences","notes":"Registration at 160 (35 exhibitors/sponsors). Keynote Rustin Moore signed. PetDesk secured as new sponsor. Conference & pre-conference schedule largely finalized.","nextSteps":"Finalize Thursday night community event, book signing, moderator assignments, and Recover session.","boardActionRequired":false,"tags":["conference","flagship"]},
-    {"id":"javte","name":"JAVTE","type":"committee","status":"active","chair":"Oreta M. Samples","tvdLead":"Michele","lastMeeting":"2026-04-20","nextMeeting":"2026-06-19","currentFocus":"2x/year product and growth as a resource","notes":"Summer 2026 issue on track. Author cheat sheet created and published with Summer call. Max print length: 20 pages.","nextSteps":"Submissions due June 1 → review June 1–15 → print July 20 → ship July 24 for conference.","boardActionRequired":false,"tags":["publication","journal"]},
-    {"id":"resource-exchange","name":"Resource Exchange","type":"committee","status":"active","chair":"Mariel Hendricks","tvdLead":"Michele & Lisa","lastMeeting":"2026-05-14","nextMeeting":"2026-06-11","currentFocus":"Growth and maintenance","notes":"Platform launched and active for all members. First fireside chat held May 20. Legacy conference materials actively being uploaded. Facebook engagement underway.","nextSteps":"Community engagement calendar for rest of 2026. Exploring post-conference collaboration/income opportunity.","boardActionRequired":false,"tags":["member engagement","platform"]},
-    {"id":"vtes","name":"Veterinary Technician Education Specialist (VTES)","type":"committee","status":"active","chair":"Peg Wheeler","tvdLead":"Michele","lastMeeting":"2026-05-08","nextMeeting":"2026-06-12","currentFocus":"Strengthening program foundation from acquisition","notes":"Application now fully online and automated. Points system updated. 2 qualified applicants in process. Committee booth planned for conference.","nextSteps":"Finalize updated exam. Execute conference booth. Board encouraged to review updated VTES info on the website.","boardActionRequired":false,"tags":["credentialing","recognition"]},
-    {"id":"awards","name":"Awards Committee","type":"committee","status":"active","chair":"Mandy Zachgo","tvdLead":"Michele","lastMeeting":"2026-05-08","nextMeeting":"2027-05-07","currentFocus":"2026 Awards Cycle — complete","notes":"Full selection cycle complete. All nominees and nominators notified. Cycle closed for the year.","nextSteps":"Review award announcement process to improve turnout and engagement in future cycles.","boardActionRequired":false,"tags":["recognition","annual"]},
-    {"id":"advocacy","name":"Advocacy Committee","type":"committee","status":"active","chair":"Mandy Zachgo","tvdLead":"Michele","lastMeeting":"2026-05-01","nextMeeting":"2026-06-01","currentFocus":"Ad hoc response to state-level legislative needs","notes":"Proactive outreach to MN programs re: nurse initiative rule-making. One program responded — no support needed. Monitoring ongoing.","nextSteps":"Continue monitoring legislative initiatives and support programs that need legislative assistance.","boardActionRequired":false,"tags":["policy","legislative"]},
-    {"id":"leadership-development","name":"Leadership Development Committee","type":"committee","status":"active","chair":"Jennifer Serling","tvdLead":"Todd","lastMeeting":"2026-05-18","nextMeeting":null,"currentFocus":"Developing charge and direction; broader vet tech leadership pipeline","notes":"Second meeting held. Nominations call is live. Developing a leadership program concept for the broader vet tech organization.","nextSteps":"Build out concept document for board feedback.","boardActionRequired":false,"tags":["governance","pipeline"]},
-    {"id":"sponsorship","name":"Sponsorship Committee","type":"committee","status":"active","chair":"Stacey Benton","tvdLead":"Michele","lastMeeting":"2026-05-12","nextMeeting":"2026-06-19","currentFocus":"Revenue generation outside of conference","notes":"First meeting held. Charge document created. Sponsor list started from conference roster. Menu-style benefits options under development.","nextSteps":"Refine benefits package. Identify and assign sponsor outreach leads ahead of July conference.","boardActionRequired":false,"tags":["revenue","partnerships"]},
-    {"id":"fvte","name":"Fellows in Veterinary Technician Education (FVTE)","type":"committee","status":"active","chair":"Tara Groves","tvdLead":"Michele","lastMeeting":"2026-05-08","nextMeeting":"2026-05-29","currentFocus":"Finishing Senior Fellows program","notes":"Sr. FVTE pilot application launched for beta testing. Virtual Q3 program in development. Seeking board feedback on Sr. FVTE requirements.","nextSteps":"Collect beta feedback on Sr. FVTE application and finalize Q3 virtual program plan.","boardActionRequired":false,"tags":["credentialing","recognition","fellows"]},
-    {"id":"membership","name":"Membership Committee","type":"committee","status":"forming","chair":"TBD","tvdLead":"TBD","lastMeeting":null,"nextMeeting":null,"currentFocus":"Strengthening engagement and value proposition","notes":"Identified as a need — not yet launched. Recruitment and retention focus. Chair needed.","nextSteps":"Identify chair. Define charge. Launch.","boardActionRequired":false,"tags":["membership","retention"]},
-    {"id":"fall-faculty-academy","name":"Vet Tech Fall Faculty Academy","type":"forming","status":"forming","chair":"Rebecca Newman & Laura Boarman (Co-Directors, proposed)","tvdLead":"Todd","lastMeeting":null,"nextMeeting":null,"currentFocus":"Finalizing plan to announce in Portland","notes":"Two-day virtual intensive. Launch: week after Labor Day 2026. Cohort: 25–30 new vet tech faculty. Fee: $50–75. Mentorship through December. Co-Directors confirmed: Rebecca Newman (Appalachian State) and Laura Boarman (Owensboro CC). Third co-director role still needed.","nextSteps":"Board approval of concept. Confirm third Co-Director. Finalize registration fee and marketing plan. Announce in Portland.","boardActionRequired":false,"tags":["faculty development","new program"]},
-    {"id":"cvtea-standards-series","name":"AVTE Standards Series (CVTEA Webinar Program)","type":"forming","status":"forming","chair":"TBD","tvdLead":"TBD","lastMeeting":null,"nextMeeting":null,"currentFocus":"Finalizing program concept to announce in Portland","notes":"11-month virtual webinar series (Sept–July), one session per CVTEA Accreditation Standard. Chair/co-chair needed. Feeds into Resource Exchange discussion threads.","nextSteps":"Board discussion and approval. Identify program chair/co-chair. Recruit presenters for Standards 1–4. Set up Resource Exchange threads.","boardActionRequired":false,"tags":["accreditation","professional development","new program"]},
-    {"id":"career-center","name":"Career Center","type":"project","status":"project","chair":"Lisa","tvdLead":"Todd","lastMeeting":null,"nextMeeting":null,"currentFocus":"Transition to YM Careers (AVMA) platform","notes":"Migration to YM Careers targeting mid-2026. W-9 complete, logo submitted, launch call done. Open: Marketing Resource Center review, Admin Training, webinar, subdomain, Job Flash list, GA4, launch.","nextSteps":"Complete remaining 7 open migration tasks. Execute launch.","boardActionRequired":false,"tags":["career services","platform migration"]},
-    {"id":"merchandise","name":"Merchandise","type":"project","status":"project","chair":"Todd","tvdLead":"Todd","lastMeeting":null,"nextMeeting":null,"currentFocus":"Transition to new online store","notes":"Transitioning AVTE branded merchandise to a new online store platform.","nextSteps":"Complete platform transition and relaunch store.","boardActionRequired":false,"tags":["merchandise","revenue"]},
-    {"id":"vtides","name":"VT Inclusion, Diversity, Equity & Success (VTIDES)","type":"project","status":"project","chair":"Todd","tvdLead":"Todd","lastMeeting":null,"nextMeeting":null,"currentFocus":"Managing grants","notes":"Active grant management. Ongoing initiative, not a formal committee.","nextSteps":"Continue grant management and reporting.","boardActionRequired":false,"tags":["DEI","grants"]},
-    {"id":"vtne-advocacy","name":"VTNE Advocacy / External Relations","type":"project","status":"project","chair":"Trish Gorham (President)","tvdLead":"Todd","lastMeeting":null,"nextMeeting":null,"currentFocus":"Multi-org coalition — VTNE/CVTEA crosswalk; AAVSB bylaw changes","notes":"Active multi-party partnership with AAVSB, AVMA, NAVTA, CVTEA. VTNE/CVTEA crosswalk completed. AVMA Convention July 2026 (Anaheim) is next milestone. Canadian VMA joining in July. AAVSB bylaw change proposal went public mid-May 2026. Comms plan active.","nextSteps":"Execute Phase 1 comms plan. Prepare for AVMA Convention July 2026. Coordinate Portland conference fireside chat.","boardActionRequired":false,"tags":["advocacy","external relations","VTNE","coalition"]}
+    {
+      "id": "conference",
+      "name": "Conference Committee",
+      "type": "committee",
+      "status": "active",
+      "chair": "Amy Johnson & Amanda Hackerott",
+      "tvdLead": "Michele",
+      "lastMeeting": "2026-05-18",
+      "nextMeeting": "2026-06-22",
+      "currentFocus": "Portland and Denver conferences",
+      "notes": "Registration at 160 (35 exhibitors/sponsors). Keynote Rustin Moore signed. PetDesk secured as new sponsor. Conference & pre-conference schedule largely finalized.",
+      "nextSteps": "Finalize Thursday night community event, book signing, moderator assignments, and Recover session.",
+      "boardActionRequired": false,
+      "tags": [
+        "conference",
+        "flagship"
+      ]
+    },
+    {
+      "id": "javte",
+      "name": "JAVTE",
+      "type": "committee",
+      "status": "active",
+      "chair": "Oreta M. Samples",
+      "tvdLead": "Michele",
+      "lastMeeting": "2026-04-20",
+      "nextMeeting": "2026-06-19",
+      "currentFocus": "2x/year product and growth as a resource",
+      "notes": "Summer 2026 issue on track. Author cheat sheet created and published with Summer call. Max print length: 20 pages.",
+      "nextSteps": "Submissions due June 1 â review June 1â15 â print July 20 â ship July 24 for conference.",
+      "boardActionRequired": false,
+      "tags": [
+        "publication",
+        "journal"
+      ]
+    },
+    {
+      "id": "resource-exchange",
+      "name": "Resource Exchange",
+      "type": "committee",
+      "status": "active",
+      "chair": "Mariel Hendricks",
+      "tvdLead": "Michele & Lisa",
+      "lastMeeting": "2026-05-14",
+      "nextMeeting": "2026-06-11",
+      "currentFocus": "Growth and maintenance",
+      "notes": "Platform launched and active for all members. First fireside chat held May 20. Legacy conference materials actively being uploaded. Facebook engagement underway.",
+      "nextSteps": "Community engagement calendar for rest of 2026. Exploring post-conference collaboration/income opportunity.",
+      "boardActionRequired": false,
+      "tags": [
+        "member engagement",
+        "platform"
+      ]
+    },
+    {
+      "id": "vtes",
+      "name": "Veterinary Technician Education Specialist (VTES)",
+      "type": "committee",
+      "status": "active",
+      "chair": "Peg Wheeler",
+      "tvdLead": "Michele",
+      "lastMeeting": "2026-05-08",
+      "nextMeeting": "2026-06-12",
+      "currentFocus": "Strengthening program foundation from acquisition",
+      "notes": "Application now fully online and automated. Points system updated. 2 qualified applicants in process. Committee booth planned for conference.",
+      "nextSteps": "Finalize updated exam. Execute conference booth. Board encouraged to review updated VTES info on the website.",
+      "boardActionRequired": false,
+      "tags": [
+        "credentialing",
+        "recognition"
+      ]
+    },
+    {
+      "id": "awards",
+      "name": "Awards Committee",
+      "type": "committee",
+      "status": "active",
+      "chair": "Mandy Zachgo",
+      "tvdLead": "Michele",
+      "lastMeeting": "2026-05-08",
+      "nextMeeting": "2027-05-07",
+      "currentFocus": "2026 Awards Cycle â complete",
+      "notes": "Full selection cycle complete. All nominees and nominators notified. Cycle closed for the year.",
+      "nextSteps": "Review award announcement process to improve turnout and engagement in future cycles.",
+      "boardActionRequired": false,
+      "tags": [
+        "recognition",
+        "annual"
+      ]
+    },
+    {
+      "id": "advocacy",
+      "name": "Advocacy Committee",
+      "type": "committee",
+      "status": "active",
+      "chair": "Mandy Zachgo",
+      "tvdLead": "Michele",
+      "lastMeeting": "2026-05-01",
+      "nextMeeting": "2026-06-01",
+      "currentFocus": "Ad hoc response to state-level legislative needs",
+      "notes": "Proactive outreach to MN programs re: nurse initiative rule-making. One program responded â no support needed. Monitoring ongoing.",
+      "nextSteps": "Continue monitoring legislative initiatives and support programs that need legislative assistance.",
+      "boardActionRequired": false,
+      "tags": [
+        "policy",
+        "legislative"
+      ]
+    },
+    {
+      "id": "leadership-development",
+      "name": "Leadership Development Committee",
+      "type": "committee",
+      "status": "active",
+      "chair": "Jennifer Serling",
+      "tvdLead": "Todd",
+      "lastMeeting": "2026-05-18",
+      "nextMeeting": null,
+      "currentFocus": "Developing charge and direction; broader vet tech leadership pipeline",
+      "notes": "Second meeting held. Nominations call is live. Developing a leadership program concept for the broader vet tech organization.",
+      "nextSteps": "Build out concept document for board feedback.",
+      "boardActionRequired": false,
+      "tags": [
+        "governance",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "sponsorship",
+      "name": "Sponsorship Committee",
+      "type": "committee",
+      "status": "active",
+      "chair": "Stacey Benton",
+      "tvdLead": "Michele",
+      "lastMeeting": "2026-05-12",
+      "nextMeeting": "2026-06-19",
+      "currentFocus": "Revenue generation outside of conference",
+      "notes": "First meeting held. Charge document created. Sponsor list started from conference roster. Menu-style benefits options under development.",
+      "nextSteps": "Refine benefits package. Identify and assign sponsor outreach leads ahead of July conference.",
+      "boardActionRequired": false,
+      "tags": [
+        "revenue",
+        "partnerships"
+      ]
+    },
+    {
+      "id": "fvte",
+      "name": "Fellows in Veterinary Technician Education (FVTE)",
+      "type": "committee",
+      "status": "active",
+      "chair": "Tara Groves",
+      "tvdLead": "Michele",
+      "lastMeeting": "2026-05-08",
+      "nextMeeting": "2026-05-29",
+      "currentFocus": "Finishing Senior Fellows program",
+      "notes": "Sr. FVTE pilot application launched for beta testing. Virtual Q3 program in development. Seeking board feedback on Sr. FVTE requirements.",
+      "nextSteps": "Collect beta feedback on Sr. FVTE application and finalize Q3 virtual program plan.",
+      "boardActionRequired": false,
+      "tags": [
+        "credentialing",
+        "recognition",
+        "fellows"
+      ]
+    },
+    {
+      "id": "membership",
+      "name": "Membership Committee",
+      "type": "committee",
+      "status": "forming",
+      "chair": "TBD",
+      "tvdLead": "TBD",
+      "lastMeeting": null,
+      "nextMeeting": null,
+      "currentFocus": "Strengthening engagement and value proposition",
+      "notes": "Identified as a need â not yet launched. Recruitment and retention focus. Chair needed.",
+      "nextSteps": "Identify chair. Define charge. Launch.",
+      "boardActionRequired": false,
+      "tags": [
+        "membership",
+        "retention"
+      ]
+    },
+    {
+      "id": "fall-faculty-academy",
+      "name": "Vet Tech Fall Faculty Academy",
+      "type": "forming",
+      "status": "forming",
+      "chair": "Rebecca Newman & Laura Boarman (Co-Directors, proposed)",
+      "tvdLead": "Todd",
+      "lastMeeting": null,
+      "nextMeeting": null,
+      "currentFocus": "Finalizing plan to announce in Portland",
+      "notes": "Two-day virtual intensive. Launch: week after Labor Day 2026. Cohort: 25â30 new vet tech faculty. Fee: $50â75. Mentorship through December. Co-Directors confirmed: Rebecca Newman (Appalachian State) and Laura Boarman (Owensboro CC). Third co-director role still needed.",
+      "nextSteps": "Board approval of concept. Confirm third Co-Director. Finalize registration fee and marketing plan. Announce in Portland.",
+      "boardActionRequired": false,
+      "tags": [
+        "faculty development",
+        "new program"
+      ]
+    },
+    {
+      "id": "cvtea-standards-series",
+      "name": "AVTE Standards Series (CVTEA Webinar Program)",
+      "type": "forming",
+      "status": "forming",
+      "chair": "TBD",
+      "tvdLead": "TBD",
+      "lastMeeting": null,
+      "nextMeeting": null,
+      "currentFocus": "Finalizing program concept to announce in Portland",
+      "notes": "11-month virtual webinar series (SeptâJuly), one session per CVTEA Accreditation Standard. Chair/co-chair needed. Feeds into Resource Exchange discussion threads.",
+      "nextSteps": "Board discussion and approval. Identify program chair/co-chair. Recruit presenters for Standards 1â4. Set up Resource Exchange threads.",
+      "boardActionRequired": false,
+      "tags": [
+        "accreditation",
+        "professional development",
+        "new program"
+      ]
+    },
+    {
+      "id": "career-center",
+      "name": "Career Center",
+      "type": "project",
+      "status": "project",
+      "chair": "Lisa",
+      "tvdLead": "Todd",
+      "lastMeeting": null,
+      "nextMeeting": null,
+      "currentFocus": "Transition to YM Careers (AVMA) platform",
+      "notes": "Migration to YM Careers targeting mid-2026. W-9 complete, logo submitted, launch call done. Open: Marketing Resource Center review, Admin Training, webinar, subdomain, Job Flash list, GA4, launch.",
+      "nextSteps": "Complete remaining 7 open migration tasks. Execute launch.",
+      "boardActionRequired": false,
+      "tags": [
+        "career services",
+        "platform migration"
+      ]
+    },
+    {
+      "id": "merchandise",
+      "name": "Merchandise",
+      "type": "project",
+      "status": "project",
+      "chair": "Todd",
+      "tvdLead": "Todd",
+      "lastMeeting": null,
+      "nextMeeting": null,
+      "currentFocus": "Transition to new online store",
+      "notes": "Transitioning AVTE branded merchandise to a new online store platform.",
+      "nextSteps": "Complete platform transition and relaunch store.",
+      "boardActionRequired": false,
+      "tags": [
+        "merchandise",
+        "revenue"
+      ]
+    },
+    {
+      "id": "vtides",
+      "name": "VT Inclusion, Diversity, Equity & Success (VTIDES)",
+      "type": "project",
+      "status": "project",
+      "chair": "Todd",
+      "tvdLead": "Todd",
+      "lastMeeting": null,
+      "nextMeeting": null,
+      "currentFocus": "Managing grants",
+      "notes": "Active grant management. Ongoing initiative, not a formal committee.",
+      "nextSteps": "Continue grant management and reporting.",
+      "boardActionRequired": false,
+      "tags": [
+        "DEI",
+        "grants"
+      ]
+    },
+    {
+      "id": "vtne-advocacy",
+      "name": "VTNE Advocacy / External Relations",
+      "type": "project",
+      "status": "project",
+      "chair": "Trish Gorham (President)",
+      "tvdLead": "Todd",
+      "lastMeeting": null,
+      "nextMeeting": null,
+      "currentFocus": "Multi-org coalition â VTNE/CVTEA crosswalk; AAVSB bylaw changes",
+      "notes": "Active multi-party partnership with AAVSB, AVMA, NAVTA, CVTEA. VTNE/CVTEA crosswalk completed. AVMA Convention July 2026 (Anaheim) is next milestone. Canadian VMA joining in July. AAVSB bylaw change proposal went public mid-May 2026. Comms plan active.",
+      "nextSteps": "Execute Phase 1 comms plan. Prepare for AVMA Convention July 2026. Coordinate Portland conference fireside chat.",
+      "boardActionRequired": false,
+      "tags": [
+        "advocacy",
+        "external relations",
+        "VTNE",
+        "coalition"
+      ]
+    }
   ]
 }
