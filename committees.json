@@ -2,7 +2,7 @@
   "meta": {
     "organization": "Association of Veterinary Technician Educators (AVTE)",
     "managedBy": "TVD Associates",
-    "lastUpdated": "2026-09-28",
+    "lastUpdated": "2026-09-29",
     "version": "1.0",
     "note": "Live, auto-deployed via GitHub. Update via Avery."
   },
@@ -281,7 +281,7 @@
     },
     {
       "id": "vtne-advocacy",
-      "name": "VTNE Advocacy / External Relations",
+      "name": "VTNE Coalition Workgroup",
       "type": "project",
       "status": "project",
       "chair": "Trish Gorham (Immediate Past President)",
